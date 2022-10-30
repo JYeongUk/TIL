@@ -21,7 +21,8 @@ const monthArr = [
 
 function getClock() {
   const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
+  // const hours = String(date.getHours()).padStart(2, "0");
+  const hours = String(getNowHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
   const year = date.getFullYear();
@@ -29,12 +30,17 @@ function getClock() {
   const today = String(date.getDate()).padStart(2, "0");
   const days = date.getDay();
 
-  if (hours == 0) {
-    hours = 12;
-  }
-  if (hours > 12) {
-    hours -= 12;
-    period = "PM";
+  function getNowHours() {
+    let nowHours = date.getHours();
+    console.log(typeof nowHours);
+    if (nowHours == 0) {
+      nowHours = 12;
+    }
+    if (nowHours > 12) {
+      nowHours = nowHours - 12;
+      period.innerText = "PM";
+    }
+    return nowHours;
   }
 
   dateNow.innerText = `${dayArr[days]}, ${
