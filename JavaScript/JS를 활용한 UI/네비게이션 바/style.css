@@ -1,0 +1,126 @@
+@import "reset.css";
+
+body {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.section-main {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.section-main h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+
+header {
+  box-sizing: border-box;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header.sticky {
+  background-color: rgb(22, 22, 22);
+  padding: 15px 100px;
+}
+
+header .brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  transition-property: background-color, color;
+}
+
+header .menu a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+header .btn {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    background-color: rgb(22, 22, 22);
+    flex-direction: column;
+    min-width: 200px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 630px) {
+  .section-main h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
