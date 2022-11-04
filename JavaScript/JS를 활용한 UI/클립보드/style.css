@@ -1,5 +1,9 @@
 @import "reset.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -11,12 +15,11 @@ body {
 .text-box {
   position: relative;
   background-color: #fff;
-  width: 650px;
+  width: 800px;
   margin: 10px;
   padding: 0 20px 20px 20px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgb(1, 1, 1 / 10%);
-  box-sizing: border-box;
 }
 
 .text-box .top-area {
@@ -45,13 +48,17 @@ body {
 }
 
 .text-box .top-area .copy-btn:hover {
-  color: #222;
+  color: teal;
 }
 
-.text-box textarea {
+.text-box .text-area {
+  margin: 0 5px;
+}
+
+.text-box .text-area textarea {
   width: 100%;
   min-height: 450px;
-  font-size: 1em;
+  font-size: 1.25em;
   padding: 10px;
   outline: none;
   resize: none;
