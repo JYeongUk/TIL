@@ -227,6 +227,12 @@ buildNumber.properties
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+.mvn/wrapper
+mvnw
+mvnw.cmd
+pom.xml
+review.iml
+
 # End of https://www.toptal.com/developers/gitignore/api/maven
 
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij+all,windows,macos,visualstudiocode
